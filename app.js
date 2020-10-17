@@ -5,10 +5,6 @@ var PORT = 3000;
 
 app.use(middleware.logger);
 
-app.get('/', middleware.requireAuthentication, function (req, res) {
-    res.send('Merhabalar');
-})
-
 app.get("/hakkimda", middleware.requireAuthentication, function (req, res) {
     res.send("Hakkımda sayfası!!!");
 })
