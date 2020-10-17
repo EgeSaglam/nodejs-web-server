@@ -1,12 +1,12 @@
-var middleWare = {
-    requireAutentication: function (req, res, next) {
-        console.log('Ozel route girildi');
+var middleware = {
+    requireAuthentication: function (req, res, next) {
+        console.log("Özel route girildi!!!");
         next();
     },
     logger: function (req, res, next) {
-        console.log(req.method + ' ' + req.orginalUrl);
+        console.log(req.method + " " + req.originalUrl);
         next();
     }
 }
 
-module.exports = middleWare;
+module.exports = middleware;
